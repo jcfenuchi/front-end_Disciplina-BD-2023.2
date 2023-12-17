@@ -1,3 +1,9 @@
+<?php
+Session_start();
+if (!($_SESSION["autenticado"]))
+        header("Location: index.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR>
 <head>
@@ -8,26 +14,18 @@
     <title>Main Menu</title>
 </head>
 <body>
-    <div class="nav-bar">
-    <header class="header">
-        <a href="https://portal.ifrn.edu.br/campus/natalcentral/" class="logo"</a>
-            <img  class="ifrn-logo" src="assets/imgs/ifrn-logo.png" alt="ifrn-logo">
-        </a>
-        <nav class="navbar">
-            <a href="main.html">Home</a>
-            <a href="chamada.html">Chamada</a>
-            <a href="gerenciamento_containers.html">Gerenciamento dos containers</a>
-            <a href="relatorio_chamada.html">Outro</a>
-        </nav>
-    </header>
-    </div>
+    <?php
+        include "autentication/includes/navbar.php";
+    ?>
     
     <div class="conteudo" id="conteudo">
         
         
         <ul>
             <li class="campoInicio">
-                <h3>CHAMADA ELETRÔNICA (container085)</h3>
+            <?php
+                echo "<h3>BEM VINDO!<br>({$_SESSION['container']})</h3>"
+            ?> 
             </li>
             <li>
                 <span class="campo01">Turma</span>

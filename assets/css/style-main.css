@@ -12,7 +12,7 @@
     --color-blue-100: #5B8DD4;
     --color-blue-300: #3C5AA1;
     --color-blue-500: #29397F;
-
+    --color-gray-100: #797979;
     --color-gradient: linear-gradient(#e95c5c, #717adf);
     
 }
@@ -26,7 +26,7 @@
 
 body {
     min-height: 100vh;
-    background: var(--color-gradient);
+    background: var(--color-gray-100);
     background-size: cover;
     background-position: center;
 }
